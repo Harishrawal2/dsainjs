@@ -67,3 +67,48 @@
 
 // This algorithm runs in O( N) time. The fact that it only goes through half of the array (in terms of iterations)
 // does not impact the big 0 time
+
+// Example 9
+// The following simple code sums the values of all the nodes in a balanced binary search tree. What is its
+// runtime?
+
+// function sum(node) {
+//   if (node == null) {
+//     return 0;
+//   }
+//   return sum(node.left) + node.value + sum(node.right);
+// }
+
+// the runtime of this code is O( N)
+
+// Q5. The following method checks if a number is prime by checking for divisibility on numbers less than it. It only needs to go up to the square root of n because if n is divisible by a number greater than its square root then it's divisible by something smaller than it
+
+// What is the time complexity of this function?
+
+// first method
+// function isPrime(n) {
+//   for (let x = 2; x * x <= n; x++) {
+//     if (n % x == 0) {
+//       return false;
+//     }
+//   }
+//   return true;
+// }
+
+// const res = isPrime(8); //false
+// console.log(res);
+
+// second method
+// function isPrime(n) {
+//   for (let x = 2; x <= Math.sqrt(n); x++) {
+//     if (n % x == 0) {
+//       return false;
+//     }
+//   }
+//   return true;
+// }
+
+// const res = isPrime(10);
+// console.log(res);
+
+// This runs in 0 ( vn) time.
